@@ -1,0 +1,200 @@
+<div style="height: 30vh;"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 d-flex justify-content-center">
+            <ul class="nav nav-pills mb-5">
+                <li class="nav-item ">
+                    <a class="nav-link " href="javascript:;"
+                    [ngClass]="{'active' : framwork === 'Angular'}"
+                    (click)="onClickFramWork('Angular')">
+                        Angular
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " href="javascript:;"
+                    [ngClass]="{'active' : framwork === 'React'}"
+                    (click)="onClickFramWork('React')">
+                        React
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " href="javascript:;"
+                    [ngClass]="{'active' : framwork === 'javascript'}"
+                    (click)="onClickFramWork('javascript')">
+                        javascript
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tabs-body">
+        <div class="card"
+        *ngIf="framwork.toLowerCase().trim() === 'angular'">
+            <div class="card-body">
+                <p>
+                    <strong>Angular</strong> Angular is a TypeScript-based, free and open-source single-page web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.
+                </p>
+            </div>
+        </div>
+        <div class="card"
+        *ngIf="framwork.toLowerCase().trim() === 'react'">
+            <div class="card-body">
+                <p>
+                    <strong>React</strong> React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js.
+                </p>
+            </div>
+        </div>
+        <div class="card"
+        *ngIf="framwork.toLowerCase().trim() === 'javascript'">
+            <div class="card-body">
+                <p>
+                    <strong>javascript</strong> JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2023, 98.7% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="height: 30vh;"></div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 d-flex justify-content-center">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class=" nav-link"
+                    [ngClass]="{active : mobile === 'iphone'}"
+                    (click)="onMobile($event)"
+                    href="javascript:;"> iphone </a>
+                </li>
+                <li class="nav-item">
+                    <a class=" nav-link"
+                    [ngClass]="{active : mobile === 'samsung'}"
+                    (click)="onMobile($event)"
+                    href="javascript:;"> samsung </a>
+                </li>
+                <li class="nav-item">
+                    <a class=" nav-link"
+                    [ngClass]="{active : mobile === 'google'}"
+                    (click)="onMobile($event)"
+                    href="javascript:;"> google </a>
+                </li>
+                <li class="nav-item">
+                    <a class=" nav-link" 
+                    [ngClass]="{active : mobile === 'onePlus'}"
+                    (click)="onMobile($event)"
+                    href="javascript:;"> onePlus </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="info mt-5" [ngSwitch]="mobile">
+        <div class="card"    *ngSwitchCase="'iphone'">
+            <div class="card-body">
+               <div class="row">
+                <div class="col-md-3">
+                    <img class="img-fluid" src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aXBob25lfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" alt="">
+                   </div>
+                   <div class="col-md-3">
+                    <img class="img-fluid" src="https://images.unsplash.com/photo-1581795669633-91ef7c9699a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="">
+                   </div>
+                   <div class="col-md-3">
+                    <img class="img-fluid" src="https://images.unsplash.com/photo-1600513138976-d1c9cd149fe8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTR8fGlwaG9uZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+                   </div>
+                   <div class="col-md-3">
+                    <img class="img-fluid" src="https://images.unsplash.com/photo-1592180631864-aa138f55bc86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE2fHxpcGhvbmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" alt="">
+                   </div>
+               </div>
+            </div>
+        </div>
+        <div class="card"  *ngSwitchCase="'samsung'">
+            <div class="card-body">
+               <div class="row">
+                <div class="col-md-3">
+                    <img class="img-fluid" src="https://rukminim2.flixcart.com/image/832/832/kzrbiq80/mobile/h/x/n/galaxy-s21-fe-5g-sm-g990ezaiinu-samsung-original-imagbpfzbrnueypq.jpeg?q=70" alt="">
+                   </div>
+                   <div class="col-md-3">
+                    <img class="img-fluid" src="https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/g/h/2/-original-imaggj68pbbezxcr.jpeg?q=70" alt="">
+                   </div>
+                   <div class="col-md-3">
+                    <img class="img-fluid" src="https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/e/0/c/galaxy-f14-5g-sm-e146blvgins-samsung-original-imagnzdkxyfqhd6r.jpeg?q=70" alt="">
+                   </div>
+                   <div class="col-md-3">
+                    <img class="img-fluid" src="https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/0/8/4/-original-imagfhu75eupxyft.jpeg?q=70" alt="">
+                   </div>
+               </div>
+            </div>
+        </div>
+        <div class="card"  *ngSwitchCase="'google'">
+            <div class="card-body">
+               <div class="row">
+                <div class="col-md-3">
+                    <img class="img-fluid" src="https://m.media-amazon.com/images/I/61nJq44iMLL._SX679_.jpg" alt="">
+                   </div>
+                   <div class="col-md-3">
+                    <img class="img-fluid" src="https://m.media-amazon.com/images/I/51f4A6Tr8zL._SX679_.jpg" alt="">
+                   </div>
+                   <div class="col-md-3">
+                    <img class="img-fluid" src="https://m.media-amazon.com/images/I/71gftOVNShL._SX679_.jpg" alt="">
+                   </div>
+                   <div class="col-md-3">
+                    <img class="img-fluid" src="https://m.media-amazon.com/images/I/51+t5GQlCdL._SX679_.jpg" alt="">
+                   </div>
+               </div>
+            </div>
+        </div>
+        <div class="card"  *ngSwitchCase="'onePlus'">
+            <div class="card-body">
+               <div class="row">
+                <div class="col-md-3">
+                    <img class="img-fluid" src="https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/a/o/z/nord-ce-3-lite-5g-ce2099-oneplus-original-imagzj3wqxzgquah.jpeg?q=70" alt="">
+                   </div>
+                   <div class="col-md-3">
+                    <img class="img-fluid" src="https://m.media-amazon.com/images/I/41g1pQr8xUL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+                   </div>
+                   <div class="col-md-3">
+                    <img class="img-fluid" src="https://m.media-amazon.com/images/I/41QQ3UZ0TtL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+                   </div>
+                   <div class="col-md-3">
+                    <img class="img-fluid" src="https://m.media-amazon.com/images/I/6175SlKKECL._AC_CR0%2C0%2C0%2C0_SX960_SY720_.jpg" alt="">
+                   </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
